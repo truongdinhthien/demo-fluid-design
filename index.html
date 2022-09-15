@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Bear Plus</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__left">
+              <div>
+                <div class="section__block">
+                  <h2>Container</h2>
+                  <div class="section__content">
+                    <div class="input__group">
+                      <label>
+                        <span>Max Width</span>
+                        <span id="toggle-container-max-width" class="toggle">
+                          <div class="toggle__inner">
+                            <div class="toggle__inner-height"></div>
+                          </div>
+                        </span>
+                      </label>
+                      <div class="input__wrapper">
+                        <input
+                          id="container-max-width"
+                          type="number"
+                          placeholder="0"
+                          value="1600"
+                          disabled
+                        />
+                        <div class="input__suffix">
+                          <p>PX</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input__group">
+                      <label>Padding</label>
+                      <div class="input__wrapper">
+                        <input
+                          id="container-padding"
+                          type="number"
+                          placeholder="0"
+                          value="80"
+                        />
+                        <div class="input__suffix">
+                          <p>PX</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section__block section__block--responsive">
+                  <h2>
+                    Responsive world
+                    <span id="toggle-responsive" class="toggle">
+                      <div class="toggle__inner">
+                        <div class="toggle__inner-height"></div>
+                      </div>
+                    </span>
+                  </h2>
+                  <div class="section__content">
+                    <div class="input__group">
+                      <label>Design Width</label>
+                      <div class="input__wrapper">
+                        <input
+                          id="design-width"
+                          type="number"
+                          placeholder="0"
+                          value="1600"
+                          disabled
+                        />
+                        <div class="input__suffix">
+                          <p>PX</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input__group">
+                      <label>Min Width</label>
+                      <div class="input__wrapper">
+                        <input
+                          id="design-min-width"
+                          type="number"
+                          placeholder="0"
+                          value="991"
+                          disabled
+                        />
+                        <div class="input__suffix">
+                          <p>PX</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button id="button" class="button">
+                  <span>Apply</span>
+                </button>
+              </div>
+            </div>
+            <div class="section__right">
+              <div>
+                <h1>Simple heading text at 64px</h1>
+                <p>
+                  16px Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book
+                </p>
+                <button class="button">
+                  <span>Button text 20px</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="/main.js"></script>
+</html>
