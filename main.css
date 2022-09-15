@@ -23,6 +23,42 @@ body {
   overflow: hidden;
 }
 
+.debug {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 100;
+  pointer-events: none;
+  display: none;
+}
+
+.debug.active {
+  display: block;
+}
+
+.debug .grid-item {
+  background-color: #fecaca80;
+}
+
+.debug .padding-debug {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  background-color: #bbf7d080;
+  width: 5rem;
+}
+.debug .padding-left {
+  right: 100%;
+}
+
+.debug .padding-right {
+  left: 100%;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -101,6 +137,7 @@ input:focus {
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
 
+  position: relative;
   min-height: 100vh;
 }
 
@@ -132,12 +169,12 @@ input:focus {
 }
 
 .section__left > div {
-  width: calc(500% / 6);
+  width: calc(calc(500% / 6) - 0.333333rem);
 }
 
 .section__right {
   grid-column: span 6;
-  padding-left: calc(100% / 6);
+  padding-left: calc(100% / 6 + 0.333333rem);
   position: relative;
   color: var(--white-color);
 

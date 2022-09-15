@@ -27,19 +27,24 @@ const generateStyle = ({ maxWidth = 0, padding = 0, designWidth = 0, minWidth = 
           padding-right: ${padding}rem;
         }
 
+        .debug .padding-debug {
+          width: ${padding}rem;
+        }
+
         ${isOpenResponsive ? `@media screen and (max-width:${minWidth}px) {
           html {font-size: ${minWidthFontSize}px;}
         }`: ''}
 
       </style>`;
+
   if(document.querySelector('#style')) {
     document.querySelector('#style').remove();
   }
   document.head.insertAdjacentHTML('beforeend', result);
-  console.log(result);
 }
 
 const responsiveSection = document.querySelector('.section__block--responsive');
+const debug = document.querySelector('.debug');
 
 const inputContainerMaxWidth = document.querySelector('#container-max-width');
 const inputPadding = document.querySelector('#container-padding');
@@ -47,6 +52,7 @@ const inputDesignWidth = document.querySelector('#design-width');
 const inputDesignMinWidth = document.querySelector('#design-min-width');
 
 const toggleContainerMaxWidth = document.querySelector('#toggle-container-max-width');
+const toggleGrid = document.querySelector('#toggle-grid');
 const toggleResponsive = document.querySelector('#toggle-responsive');
 
 const button = document.querySelector('#button');
@@ -61,6 +67,11 @@ toggleResponsive.addEventListener('click', (e) => {
   toggleResponsive.classList.toggle('active');
   inputDesignWidth.disabled = !inputDesignWidth.disabled;
   inputDesignMinWidth.disabled = !inputDesignMinWidth.disabled;
+})
+
+toggleGrid.addEventListener('click', (e) => {
+  toggleGrid.classList.toggle('active');
+  debug.classList.toggle('active');
 })
 
 button.addEventListener('click', (e) => {
